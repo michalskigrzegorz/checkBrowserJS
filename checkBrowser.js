@@ -29,5 +29,28 @@ function BrowserDetection () {
 	return { name: match[1] || "", version: match[2] || "0" };
 };
 
-// Check in console
-// BrowserDetection();
+function Browser () {
+
+	var s = navigator.userAgent.toLowerCase();
+	var match = /(webkit)[ \/]([\w.]+)/.exec(s) || 
+				/(opera)(?:.*version)?[ \/]([\w.]+)/.exec(s) ||
+				/(msie) ([\w.]+)/.exec(s) ||
+				!/compatible/.test(s) && 
+				/(mozilla)(?:.*? rv:([\w.]+))?/.exec(s) ||
+				[];
+	
+	return { name: match[1] || "", version: match[2] || "0" };
+};
+
+// auxiliary variable
+var a = Browser();
+
+function Compare () {
+    if (c.name === 'mozilla') {
+        alert('This is Mozilla');
+    }
+}
+
+// Check function Compare()
+// Compare()
+
