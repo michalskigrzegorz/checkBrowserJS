@@ -46,11 +46,14 @@ function Browser () {
 var a = Browser();
 
 function Compare () {
-    if (c.name === 'mozilla') {
-        alert('This is Mozilla');
+    if (a.name === 'msie') {
+        window.alert('This is IE');
+    } else if (a.name === 'mozilla') {
+        window.alert('This is Mozilla');
     }
 }
 
 // Check function Compare()
-// Compare()
+Compare();
+
 
